@@ -1,0 +1,202 @@
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: black;
+    --color-black-1: #212b38;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+
+#header{
+    display: flex;
+    padding: 3px 25px;
+    justify-content: space-between;
+    width: 100%;
+    background: lightcyan;
+    height: 130px;
+    padding: 0 5%;
+    align-items: center;
+    /* position: sticky; */
+}
+
+#header #prove img{
+    border-radius: 50px;
+}
+
+#header #prove a{
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+#header h1{
+    font-family: "Playwrite GB S", cursive;
+    /* font-family: "Rubik Wet Paint", system-ui; */
+    font-size: 28px;
+    color: black;
+    padding: 37px 0px 0px 130px;
+}
+#header ul{
+    list-style: none;
+    display: flex;
+}
+#header ul li{
+    margin: 100px 30px 0px 25px;
+    position: relative;
+}
+#header ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    font-weight: 600;
+    
+}
+#header ul li a:hover {
+    color: var(--color-primary);
+}
+
+
+/* ---------------This is footer segment------------------ */
+footer{
+    background-color: black;
+}
+.footerContainer{
+    width: 100%;
+    padding: 1px 20px 0px 15px;
+}
+.socialIcons{
+    display: flex;
+    justify-content:flex-end;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 4px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+/* Hover effects on social media icons */
+.socialIcons a:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+/* This is copyright section */
+.footerCopyright{
+    color: white;
+    font-size: 12px;
+}
+.footerContainer .design{
+    opacity: 1;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin: 0px 5px;
+}
+/* This is footerNav */
+.footerNav{
+    margin: 30px 30px;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+    color: brown;
+}
+.footerBotton{
+    background-color: #000;
+    padding: 4px;
+    text-align: center;
+}
+
+/* -----------This is media query--------------- */
+@media (max-width: 700px){
+    .footerContainer .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    
+}
+/* -------------This is dropdown section----------------------------------- */
+.dropDown {
+    display: none;
+    /* position: absolute; */
+    /* left: 0;
+    top: 106%;
+    background-color: aquamarine; */
+}
+
+/* .dropDown ul {
+    display: block;
+    margin: 10px;
+} */
+#header ul li:hover .dropDown {
+    display: block;
+    position: absolute;
+    background-color: aquamarine;
+    top: 100%;
+}
+#header ul li:hover .dropDown ul {
+    display: block;
+    margin: 0px;
+}
+#header ul li:hover .dropDown li {
+    width: 90px;
+    margin: 20px;
+}
+/* ------------ */
+.fas {
+    float: right;
+    margin-left: 5px;
+    padding-top: 2px;
+    
+    
+}
+.dropDown-2 {
+    display: none;
+}
+.dropDown ul li:hover  .dropDown-2 {
+    display: block;
+    position: absolute;
+    background-color: aquamarine;
+    top: 0;
+    left: 90px;
+    width: 250px;
+}
+.dropDown ul li:hover .dropDown-2 ul li:hover ul::after {
+    color: var(--color-black);
+}
