@@ -3,6 +3,7 @@
     --color-white: #e9e9e9;
     --color-black: black;
     --color-black-1: #212b38;
+    --linear-grad: rgb(237, 114, 114);
 }
 
 
@@ -68,7 +69,7 @@
 
 /* ---------------This is footer segment------------------ */
 footer{
-    background-color: black;
+    background-color: rgb(5, 9, 9);
 }
 .footerContainer{
     width: 100%;
@@ -115,10 +116,11 @@ footer{
 /* This is footerNav */
 .footerNav{
     margin: 30px 30px;
+    height: 200px;
 }
 .footerNav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     list-style-type: none;
 }
 .footerNav ul li a{
@@ -127,12 +129,13 @@ footer{
     text-decoration: none;
     font-size: 1.2em;
     opacity: 0.7;
-    transition: 0.5s;
+    font-weight: 700;
+    /* transition: 0.5s; */
 }
-.footerNav ul li a:hover{
+/* .footerNav ul li a:hover{
     opacity: 1;
     color: brown;
-}
+} */
 .footerBotton{
     background-color: #000;
     padding: 4px;
@@ -199,4 +202,257 @@ footer{
 }
 .dropDown ul li:hover .dropDown-2 ul li:hover ul::after {
     color: var(--color-black);
+}
+
+/* ------------This is Footer-Dropdown------------- */
+.footer-dropDown ul {
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.footer-dropDown ul li:not(:last-child){
+    margin-bottom: 12px;
+}
+.footer-dropDown ul li a {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+.footer-dropDown ul li a:hover {
+    color: darkgreen;
+    padding-left: 10px;
+    font-weight: 600;
+}
+/* =============================This is Hero section =============================== */
+.heroSection {
+    position:relative;
+    width: 860px;
+    height: 500px;
+    background-color: #d3cbcb;
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 60px 60px;
+    margin-top: 60px;
+}
+.from-heroSection {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 25px 40px;
+    transition:  all 0.6s ease-in-out;
+}
+.sign-up-heroSection{
+    opacity: 0;
+    z-index: 1;  
+}
+.sign-in-heroSection {
+    z-index: 2;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 50px;
+}
+h2 {
+    color: black;
+}
+
+.social-Icon {
+    margin: 20px 0px;
+}
+.social-Icon a {
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    height: 40px;
+    width: 40px;
+}
+span {
+    font-size: 14px;
+}
+.infield {
+    position: relative;
+    margin: 8px 0px;
+    width: 70%;
+}
+input {
+    width: 100%;
+    padding: 12px 8px;
+    outline: none;
+    background-color: #eae8e8;
+    border: none;
+}
+label {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: var(--linear-grad);
+    transition: 0.3s;
+}
+input:focus ~ label{
+    width: 100%;
+}
+
+a{
+    color: #070505;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 0px;
+}
+a.forgetPassword{
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgb(122, 86, 86);
+}
+button {
+    border-radius: 20px;
+    border: 1px solid var(--color-black-1);
+    background: var(--linear-grad);
+    color: #1e1515;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.from-heroSection button {
+    margin-top: 17px;
+    transition: 80ms ease-in;
+}
+.from-heroSection button:hover {
+    background: #fff;
+    color: var(--linear-grad);
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+#overlayBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 295px;
+    transform: translateX(-50%);
+    width: 143.7px;
+    height: 40px;
+    border: 1px solid #FFF;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.overlay{
+    position: relative;
+    background: var(--linear-grad);
+    color: #FFF;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+}
+
+.overlay-left {
+    right: 60%;
+    transform: translateX(-12%);
+}
+.overlay-right{
+    right: 0%;
+    transform: translateX(0%);
+}
+.overlay-panel h2{
+    color: #210e0e;
+}
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 25px 0px 35px;
+}
+.overlay-panel button {
+    border: none;
+    background-color: transparent;
+}
+.right-panel-active .overlay-container{
+    transform: translateX(-150%);
+}
+.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+.right-panel-active .overlay-left {
+    transform: translateX(25%);
+
+}
+.right-panel-active .overlay-right{
+    transform: translateX(25%);
+}
+.right-panel-active .sign-in-heroSection{
+    transform: translateX(20%);
+    opacity: 0;
+}
+.right-panel-active .sign-up-heroSection{
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+@keyframes show {
+    0%, 50% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.btnScaled {
+    animation: scaleBtn 0.6s;
+}
+@keyframes scaleBtn {
+    0%{
+        width: 143.7px;
+    }
+    50%{
+        width: 250px;
+    }
+    100%{
+        width: 143.7px;
+    }
+}
+/* =============================This is Hero section =============================== */
+/* ------------This is our toppers section ----------------------- */
+.topper-debaters {
+    white-space: nowrap;
 }
