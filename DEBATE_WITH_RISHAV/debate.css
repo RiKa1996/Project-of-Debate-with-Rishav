@@ -451,8 +451,93 @@ p {
         width: 143.7px;
     }
 }
+/* -------------------------This is news section--------------- */
+.cards-container {
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    height: 100%;
+}
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 12px;
+}
+.news-source{
+    margin-block: 12px;
+}
+
+
 /* =============================This is Hero section =============================== */
 /* ------------This is our toppers section ----------------------- */
-.topper-debaters {
+.debaters {
+    overflow: hidden;
+    padding: 0px 60px 0px 60px ; 
+    background-color: rgb(233, 233, 233);
     white-space: nowrap;
+    position: relative;
+}
+
+.debaters::before,
+.debaters::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.debaters::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(41, 40, 40));
+}
+.debaters::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(41, 40, 40));
+}
+
+.topper-debaters {
+    display: inline-block;
+    animation: 25s slide infinite linear;
+}
+@keyframes slide {
+    form {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.debaters:hover .topper-debaters {
+    animation-play-state: paused;      /* image pe click krne per paused ho jayega */
+}
+
+.topper-debaters img {
+    height: 200px;
+    margin: 10px 18px 10px 10px; 
+}
+.toppers{
+    margin: 0px 20px;
+}
+.toppers-1 {
+    color: brown;
+    font-size: 16px;
+    background-color: rgb(252, 252, 252)
 }
