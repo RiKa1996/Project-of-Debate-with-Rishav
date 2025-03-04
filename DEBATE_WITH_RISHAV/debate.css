@@ -22,7 +22,7 @@
     padding: 3px 25px;
     justify-content: space-between;
     width: 100%;
-    background: lightcyan;
+    background: black;
     height: 130px;
     padding: 0 5%;
     align-items: center;
@@ -36,14 +36,14 @@
 #header #prove a{
     text-decoration: none;
     font-weight: 600;
-    color: var(--color-black);
+    color: white;
 }
 
 #header h1{
     font-family: "Playwrite GB S", cursive;
     /* font-family: "Rubik Wet Paint", system-ui; */
     font-size: 28px;
-    color: black;
+    color: white;
     padding: 37px 0px 0px 130px;
 }
 #header ul{
@@ -55,7 +55,7 @@
     position: relative;
 }
 #header ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     transition: all 0.3s;
@@ -170,7 +170,7 @@ footer{
 #header ul li:hover .dropDown {
     display: block;
     position: absolute;
-    background-color: aquamarine;
+    background-color: rgb(47, 38, 38);
     top: 100%;
 }
 #header ul li:hover .dropDown ul {
@@ -195,7 +195,7 @@ footer{
 .dropDown ul li:hover  .dropDown-2 {
     display: block;
     position: absolute;
-    background-color: aquamarine;
+    background-color: rgb(47, 38, 38);
     top: 0;
     left: 90px;
     width: 250px;
@@ -214,14 +214,19 @@ footer{
 .footer-dropDown ul li:not(:last-child){
     margin-bottom: 12px;
 }
-.footer-dropDown ul li a {
+.footer-dropDown ul li{
+    cursor: pointer;
     font-size: 14px;
     text-transform: capitalize;
     color: white;
     font-weight: 300;
     transition: all 0.3s ease;
 }
-.footer-dropDown ul li a:hover {
+
+.footer-dropDown ul li.active {
+    color: red;
+}
+.footer-dropDown ul li:hover {
     color: darkgreen;
     padding-left: 10px;
     font-weight: 600;
@@ -451,7 +456,30 @@ p {
         width: 143.7px;
     }
 }
+/* ------------HEADLINES-------------------- */
+.news-headline {
+    justify-content: center;
+    align-items: center;
+    color: black;
+    display: flex;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
 /* -------------------------This is news section--------------- */
+.all-in-one{
+    overflow-x: scroll hidden;
+    width: 80%;
+    height: 400px;
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
+}
+.all-in-one::-webkit-scrollbar{
+    display: none;
+}
+
 .cards-container {
     
     justify-content: space-between;
@@ -459,6 +487,8 @@ p {
     row-gap: 20px;
     align-items: start;
     height: 100%;
+    display: flex;
+    margin: 20px;
 }
 .card {
     width: 360px;
@@ -466,7 +496,7 @@ p {
     box-shadow: 0 0 4px #d4ecff;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #dacbcb;
     overflow: hidden;
     
 }

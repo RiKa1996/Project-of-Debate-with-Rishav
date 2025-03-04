@@ -54,6 +54,16 @@ function fillDataInCard(cardClone, article) {
     });
     newsSource.innerHTML = `${article.source.name} ⋅ ${date}`;
 
+    cardClone.firstElementChild.addEventListener("click", () => {
+        window.open(article.url, "_blank");
 
-
+    });
+}
+let curSelectedNav = null;/* isse humne jo news select kiya uske purane news ko remove krne ke liye */
+function onNavItemClick(id) {
+    fetchNews(id);
+    const navItem = document.getElementById(id);
+    curSelectedNav?.classList.remove('active')      /* iska mtlb hai ki humne jb naye nav ko click kiya to purane wale nav ko remove krna hai. */
+    curSelectedNav = navItem;
+    curSelectedNav.classList.add('active');    /* css me  */
 }

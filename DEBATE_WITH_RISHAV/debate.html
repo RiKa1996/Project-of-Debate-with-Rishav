@@ -134,22 +134,25 @@
             <button id="overlayBtn"></button>
         </div>
     </div>
+    <h1 class="news-headline">News</h1>
     <!-- This is live debate -->
-    <div class="cards-container container flex" id="cards-container">
-        
-    </div>
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://tse1.mm.bing.net/th?id=OIP.cqXa3mCRmQj7naiV795-yQHaFh&pid=Api&P=0&h=180" alt="news-img" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">This is the Title</h3>
-                <h6 class="news-source" id="news-source">End Gadget 03/022025</h6>
-                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum dolores facilis quos alias temporibus non a, sapiente, quis et placeat dolor eos ab quibusdam ullam perferendis, tempora sunt ipsam.</p>
-            </div>
+    <div class="all-in-one">
+        <div class="cards-container container flex" id="cards-container">
+            
         </div>
-    </template>
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.cqXa3mCRmQj7naiV795-yQHaFh&pid=Api&P=0&h=180" alt="news-img" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source" id="news-source">End Gadget 03/022025</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsum dolores facilis quos alias temporibus non a, sapiente, quis et placeat dolor eos ab quibusdam ullam perferendis, tempora sunt ipsam.</p>
+                </div>
+            </div>
+        </template>
+    </div>
     <!-- This is some topper debater -->
     <h4 class="toppers">"Introducing the brilliant toppers of <a href="#" class="toppers-1">debate with rishav</a>, whose dedication and excellence have set new standards of achievement!"</h4>
     <div class="debaters">
@@ -173,20 +176,20 @@
                     <li><a href="">News</a>
                         <div class="footer-dropDown">
                             <ul>
-                                <li><a href="">Political News</a></li>
-                                <li><a href="">Crime & Legal News</a></li>
-                                <li><a href="">Business & Economic News</a></li>
-                                <li><a href="">Science & Technology News</a></li>
-                                <li><a href="">Entertainment News</a></li>
-                                <li><a href="">Sports News</a></li>
-                                <li><a href="">Lifestyle News</a></li>
+                                <li id="financial-post" onclick="onNavItemClick('financial-post')">Finance</li>
+                                <li id="legal" onclick="onNavItemClick('legal')">Crime & Legal News</li>
+                                <li id="business" onclick="onNavItemClick('business')">Business & Economic News</li>
+                                <li id="techno" onclick="onNavItemClick('techno')">Science & Technology News</li>
+                                <li id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment News</li>
+                                <li id="sports" onclick="onNavItemClick('sports')">Sports News</li>
+                                <li id="lifeStyle" onclick="onNavItemClick('lifeStyle')">Lifestyle News</li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="">About</a>
                         <div class="footer-dropDown">
                             <ul>
-                                <li><a href="">Introduction</a></li>
+                                <li><a href="www.google.com" target="_blank">Introduction</a></li>
                                 <li><a href="">Purpose & Passion</a></li>
                                 <li><a href="">Experience</a></li>
                                 <li><a href="">Debate Topics & Interests</a></li>
